@@ -1,0 +1,5 @@
+
+print("Hello, Decentrathon!")
+
+name = input("Enter your name: ")
+print("Welcome,", name)
