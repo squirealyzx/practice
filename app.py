@@ -1,18 +1,17 @@
 
 import streamlit as st
+from coding import analyze_text
 
-st.title("AI Text Analyzer 🚀")
+st.title("Decentrathon Text Analyzer 🚀")
 
 text = st.text_area("Enter your text:")
 
 if st.button("Analyze"):
     if text:
-        words = text.split()
+        words, characters = analyze_text(text)
 
         st.success("Analysis completed!")
-        st.write("Words:", len(words))
-        st.write("Characters:", len(text))
+        st.write("Words:", words)
+        st.write("Characters:", characters)
     else:
         st.warning("Please enter some text!")
-
-
